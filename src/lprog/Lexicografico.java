@@ -29,6 +29,7 @@ public class Lexicografico {
     
     
     
+    
     public Lexicografico(String ruta){
     
     this.index_arxiu=0;
@@ -44,9 +45,19 @@ public class Lexicografico {
         Token t;
         List<Character> chars = new ArrayList<>();
         
+        
+        if(this.finalFitxer()){
+        
+            t= new Token();
+            t.setTipo("-");
+            t.setLexema("-");
+            return t;
+            
+        }
+        
         int estado =0;
         
-        while(true){ // mientras no sea final de fichero...
+        while(true){ 
         
             char caracter = this.dameCaracter();
             
@@ -205,6 +216,17 @@ public class Lexicografico {
         index_arxiu++;
         b.close();
         return caracter;
+}
+    
+    public boolean finalFitxer() throws FileNotFoundException, IOException {
+        
+        FileReader f = new FileReader(this.ruta);
+        BufferedReader b = new BufferedReader(f);
+        b.skip(this.index_arxiu);
+        String s = b.readLine();
+        b.close();
+        if(s==null){return true;}
+        return false;
 }
 
     public void retrocedeixCaracter(){

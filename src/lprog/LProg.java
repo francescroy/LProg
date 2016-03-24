@@ -37,6 +37,18 @@ public class LProg {
         System.out.println(t2.getTipo());
         System.out.println(t2.getLexema());    
         
+        Token t3 = l1.dameToken();
+        System.out.println(t3.getTipo());
+        System.out.println(t3.getLexema());  
+        
+        Token t4 = l1.dameToken();
+        System.out.println(t4.getTipo());
+        System.out.println(t4.getLexema());
+        
+        Token t5 = l1.dameToken();
+        System.out.println(t5.getTipo());
+        System.out.println(t5.getLexema());
+      
         
         
       
