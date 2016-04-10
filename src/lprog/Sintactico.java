@@ -10,6 +10,7 @@ package lprog;
  * @author francescroy
  */
 public class Sintactico {
+    
     private Lexicografico lex;
     
     public Sintactico(Lexicografico l){

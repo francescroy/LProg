@@ -16,9 +16,9 @@ import java.util.List;
  
 public class Lexicografico {
     
-    int num_carac=0;
-    
     // Atributos
+    
+    private int num_carac=0;
     
     private int index_arxiu;
     
