@@ -276,7 +276,6 @@ public class Sintactico {
             lex.dameToken();
             lex.haciaAdelante();
         }else{
-            
             throw new Exception();
         }
     }
