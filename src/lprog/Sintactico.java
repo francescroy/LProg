@@ -151,7 +151,17 @@ public class Sintactico {
         Llista_exp_2_prima();
     }
     private void Llista_exp() throws Exception{
-        Llista_exp_2();
+        
+        if(lex.dameToken().getTipo().equals("+") || lex.dameToken().getTipo().equals("-") || 
+           lex.dameToken().getTipo().equals("not") || lex.dameToken().getTipo().equals("cte_entera") ||
+           lex.dameToken().getTipo().equals("cte_logica") || lex.dameToken().getTipo().equals("cte_cadena")  ||   
+           lex.dameToken().getTipo().equals("(") || lex.dameToken().getTipo().equals("id")     
+                
+                ){
+            Llista_exp_2();
+        }
+        
+        
     }
     
     private void Terme_2() throws Exception{
