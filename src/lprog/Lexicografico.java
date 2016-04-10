@@ -16,7 +16,7 @@ import java.util.List;
  
 public class Lexicografico {
     
-    static int num_carac=0;
+    int num_carac=0;
     
     // Atributos
     
@@ -1530,6 +1530,7 @@ public class Lexicografico {
     
         this.index_arxiu= this.index_arxiu-num_carac;
         this.a_avancar= num_carac;
+        this.num_carac=0;
         
     }
     
